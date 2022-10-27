@@ -83,10 +83,14 @@ function drawTeamMember(teamMember){
   let prevContent = teamContainer.innerHTML;
 
   // 2
+  // destrutturo l'oggetto in arrivo dalla proprietà delle funzione
+  const {name, role, image, qualities} = teamMember;
+  /*
+  è come fare: 
   const name = teamMember.name;
   const role = teamMember.role;
   const image = teamMember.image;
-  const qualities = teamMember.qualities;
+  const qualities = teamMember.qualities;*/
 
   // 3
   prevContent += `
@@ -135,10 +139,10 @@ function addNewMember(){
 
   // 2
   const newTeamMember = {
-    name: name,
-    role: role,
-    image: image,
-    qualities: cleanNewQualities
+    name,
+    role,
+    image,
+    qualities
   }
 
   console.log(newTeamMember);
